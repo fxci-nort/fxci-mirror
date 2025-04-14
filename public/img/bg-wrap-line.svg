@@ -1,0 +1,66 @@
+<svg width="1440" height="776" viewBox="0 0 1440 776" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-28.5 756C43.5 756 173.5 723.607 285.5 600.902C425.5 447.521 647.903 444.087 759 444.087C890.5 444.087 1017 418.905 1124.5 240.914C1232 62.9238 1377.5 26.8678 1471 20"
+          stroke="url(#paint0_linear_351_10812)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M-28.5 756C43.5 756 173.5 723.607 285.5 600.902C425.5 447.521 647.903 444.087 759 444.087C890.5 444.087 1017 418.905 1124.5 240.914C1232 62.9238 1377.5 26.8678 1471 20"
+          stroke="url(#paint1_linear_351_10812)" stroke-width="10" stroke-linecap="round"/>
+    <g filter="url(#filter0_f_351_10812)">
+        <path d="M-28.5 756C43.5 756 173.5 723.607 285.5 600.902C425.5 447.521 647.903 444.087 759 444.087C890.5 444.087 1017 418.905 1124.5 240.914C1232 62.9238 1377.5 26.8678 1471 20"
+              stroke="url(#paint2_linear_351_10812)" stroke-width="10" stroke-linecap="round"/>
+    </g>
+    <defs>
+        <filter id="filter0_f_351_10812" x="-48.5" y="-0.000244141" width="1539.5" height="776" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="7.5" result="effect1_foregroundBlur_351_10812"/>
+        </filter>
+
+        <!-- Градиент с анимацией -->
+        <linearGradient id="paint0_linear_351_10812" x1="-28.5" y1="388" x2="1461" y2="388" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#160937">
+                <animate attributeName="stop-color" values="#160937; #262B90; #C3C6FF; #160937" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="0.625" stop-color="#262B90">
+                <animate attributeName="stop-color" values="#262B90; #232AAE; #C3C6FF; #262B90" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="1" stop-color="#C3C6FF">
+                <animate attributeName="stop-color" values="#C3C6FF; #160937; #262B90; #C3C6FF" dur="5s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="paint1_linear_351_10812" x1="-28.5" y1="388" x2="1461" y2="388" gradientUnits="userSpaceOnUse">
+            <stop offset="0.07" stop-color="#160937">
+                <animate attributeName="stop-color" values="#160937; #232AAE; white; #160937" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="0.58" stop-color="#262B90">
+                <animate attributeName="stop-color" values="#262B90; #232AAE; white; #262B90" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="0.76" stop-color="#232AAE">
+                <animate attributeName="stop-color" values="#232AAE; white; #C3C6FF; #232AAE" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="0.865" stop-color="white">
+                <animate attributeName="stop-color" values="white; #C3C6FF; #160937; white" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="0.965" stop-color="#C3C6FF">
+                <animate attributeName="stop-color" values="#C3C6FF; #160937; #262B90; #C3C6FF" dur="5s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="paint2_linear_351_10812" x1="-28.5" y1="388" x2="1461" y2="388" gradientUnits="userSpaceOnUse">
+            <stop offset="0.07" stop-color="#160937">
+                <animate attributeName="stop-color" values="#160937; #232AAE; white; #160937" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="0.58" stop-color="#262B90">
+                <animate attributeName="stop-color" values="#262B90; #232AAE; white; #262B90" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="0.76" stop-color="#232AAE">
+                <animate attributeName="stop-color" values="#232AAE; white; #C3C6FF; #232AAE" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="0.865" stop-color="white">
+                <animate attributeName="stop-color" values="white; #C3C6FF; #160937; white" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="0.965" stop-color="#C3C6FF">
+                <animate attributeName="stop-color" values="#C3C6FF; #160937; #262B90; #C3C6FF" dur="5s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+    </defs>
+</svg>
