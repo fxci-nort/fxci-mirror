@@ -1,12 +1,16 @@
+import Plans from '@/components/plans';
+import { Hero, Rule, Challenge, WhyFxci } from '@/components/instant';
+
 function Instant() {
-    return (
-        <div className="bg-wrap">
-            <h1 className="text-center text-3xl font-bold py-8">Instant Trading Page</h1>
-            <div className="container mx-auto px-4 py-8">
-                <p className="text-lg">Welcome to the Instant Trading section.</p>
-            </div>
-        </div>
-    )
+  return (
+    <section id="model-instant" className="model-page">
+      <Hero />
+      <Rule />
+      <Challenge />
+      <Plans />
+      <WhyFxci />
+    </section>
+  );
 }
 
-export default Instant 
+export default Instant;
