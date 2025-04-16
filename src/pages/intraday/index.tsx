@@ -1,7 +1,7 @@
 import Plans from '@/components/plans';
 import { Hero, Challenge, Advantages, WhyFxci, Banners } from '@/components/intraday';
 
-function Intraday() {
+function IntradayPage() {
   return (
     <section id="model-intraday" className="model-page">
       <Hero />
@@ -14,4 +14,4 @@ function Intraday() {
   );
 }
 
-export default Intraday;
+export default IntradayPage;

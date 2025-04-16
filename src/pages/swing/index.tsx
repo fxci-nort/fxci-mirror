@@ -1,7 +1,7 @@
 import { Hero, Rule, Banner } from '@/components/swing';
 import Plans from '@/components/plans';
 
-function Swing() {
+function SwingPage() {
   return (
     <section id="model-swing" className="model-page">
       <Hero />
@@ -12,4 +12,4 @@ function Swing() {
   );
 }
 
-export default Swing;
+export default SwingPage;

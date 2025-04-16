@@ -10,7 +10,7 @@ import Proof from '@/components/main/proof';
 import Subscribe from '@/components/main/subscribe';
 import Become from '@/components/main/become';
 
-function Main() {
+function MainPage() {
   return (
     <>
       <Hero />
@@ -30,4 +30,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default MainPage;
