@@ -9,8 +9,11 @@ import TraderFeedback from '@/components/main/trader-feedback';
 import Proof from '@/components/main/proof';
 import Subscribe from '@/components/main/subscribe';
 import Become from '@/components/main/become';
+import { useScrollToPlansLinks } from '@/shared/components';
 
 function MainPage() {
+  useScrollToPlansLinks();
+
   return (
     <>
       <Hero />

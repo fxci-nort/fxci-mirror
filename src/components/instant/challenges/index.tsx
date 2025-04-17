@@ -1,3 +1,10 @@
+import iconCruve from '@/assets/img/icon-a-cruve.svg';
+import iconClose2 from '@/assets/img/icon-a-close-2.svg';
+import iconLight from '@/assets/img/icon-a-light.svg';
+import iconArrow2 from '@/assets/img/icon-a-arrow-2.svg';
+import iconCalendar2 from '@/assets/img/icon-a-calendar-2.svg';
+import iconDol2 from '@/assets/img/icon-a-dol2.svg';
+
 function Challenge() {
   return (
     <div className="mb-container-scroll container">
@@ -7,7 +14,7 @@ function Challenge() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src="/img/icon-a-cruve.svg" alt="" />
+                <img src={iconCruve} alt="" />
               </div>
               <div className="card__2-title">Funded account from the start</div>
             </div>
@@ -19,7 +26,7 @@ function Challenge() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src="/img/icon-a-close-2.svg" alt="" />
+                <img src={iconClose2} alt="" />
               </div>
               <div className="card__2-title">Weekend holding allowed</div>
             </div>
@@ -31,7 +38,7 @@ function Challenge() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src="/img/icon-a-light.svg" alt="" />
+                <img src={iconLight} alt="" />
               </div>
               <div className="card__2-title">News trading allowed</div>
             </div>
@@ -43,7 +50,7 @@ function Challenge() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src="/img/icon-a-arrow-2.svg" alt="" />
+                <img src={iconArrow2} alt="" />
               </div>
               <div className="card__2-title">High-leverage</div>
             </div>
@@ -56,7 +63,7 @@ function Challenge() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src="/img/icon-a-calendar-2.svg" alt="" />
+                <img src={iconCalendar2} alt="" />
               </div>
               <div className="card__2-title">No minimum trading days</div>
             </div>
@@ -68,7 +75,7 @@ function Challenge() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src="/img/icon-a-dol2.svg" alt="" />
+                <img src={iconDol2} alt="" />
               </div>
               <div className="card__2-title">No daily loss</div>
             </div>

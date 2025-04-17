@@ -1,4 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+import iconStars from '@/assets/img/stars.svg';
+import iconVerified from '@/assets/img/icon-verified.svg';
 
 interface FeedbackItemProps {
   author: string;
@@ -7,15 +9,13 @@ interface FeedbackItemProps {
   fullReview: string;
 }
 
-interface FeedbackItem extends FeedbackItemProps {}
-
 const TraderFeedback: React.FC = () => {
   // Feedback item component to avoid repetition
   const FeedbackItem: React.FC<FeedbackItemProps> = ({ author, time, shortReview, fullReview }) => (
     <div className="trader-feedback__item">
       <div className="trader-feedback__item-rating">
-        <img className="trader-feedback__item-rating-stars" src="/img/stars.svg" alt="" />
-        <img src="/img/icon-verified.svg" alt="" /> Verified
+        <img className="trader-feedback__item-rating-stars" src={iconStars} alt="" />
+        <img src={iconVerified} alt="" /> Verified
       </div>
       <div className="trader-feedback__item-author">
         {author}, {time}
@@ -26,7 +26,7 @@ const TraderFeedback: React.FC = () => {
   );
 
   // Complete feedback items dataset
-  const feedbackItems: FeedbackItem[] = [
+  const feedbackItems: FeedbackItemProps[] = [
     {
       author: 'DINA',
       time: '1 month ago',
@@ -214,7 +214,7 @@ const TraderFeedback: React.FC = () => {
   useEffect(() => {
     const scrollSpeed = 50; // ms between scroll steps
     const scrollStep = 1; // pixels to scroll each step
-    const scrollIntervals: number[] = [];
+    const scrollIntervals: NodeJS.Timeout[] = [];
 
     // Function to handle scrolling for a column
     const setupScrolling = (columnElement: HTMLDivElement | null) => {
@@ -264,9 +264,10 @@ const TraderFeedback: React.FC = () => {
 
   // Add extra CSS to enable proper scrolling
   const columnStyle: React.CSSProperties = {
-    height: '500px',
+    height: '700px', // Increased from 500px to make it taller
     overflowY: 'auto',
     position: 'relative',
+    pointerEvents: 'none', // Prevent manual scrolling
   };
 
   return (

@@ -1,3 +1,6 @@
+import help from '@/assets/img/help.svg';
+import support from '@/assets/img/support.svg';
+
 function Contacts() {
   return (
     <section id="contacts">
@@ -15,7 +18,7 @@ function Contacts() {
               </div>
               <div className="contact-first-block-column-text-two">
                 <div className="contact-first-block-column-text">
-                  <img src="img/help.svg" alt="Help" />
+                  <img src={help} alt="Help" />
                   <div className="text-container">
                     <div className="title">24/7 help</div>
                     <div className="text">
@@ -24,7 +27,7 @@ function Contacts() {
                   </div>
                 </div>
                 <div className="contact-first-block-column-text">
-                  <img src="img/support.svg" alt="Support" />
+                  <img src={support} alt="Support" />
                   <div className="text-container">
                     <div className="title">Top-notch support</div>
                     <div className="text">
@@ -79,10 +82,8 @@ function Contacts() {
               </div>
               <div className="row">
                 <span className="title">Get in touch</span>
-                <a className="link" href="#">
-                  <span className="__cf_email__" data-cfemail="d6a5a3a6a6b9a4a296b0aeb5bff8b5b9bb">
-                    [email&#160;protected]
-                  </span>
+                <a href="mailto:support@fxci.com">
+                  <span className="">support@fxci.com</span>
                 </a>
               </div>
             </div>

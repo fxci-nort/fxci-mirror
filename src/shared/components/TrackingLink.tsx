@@ -2,15 +2,14 @@ import React, { AnchorHTMLAttributes } from 'react';
 import { useParams } from '@/shared/params';
 
 interface TrackingLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  to?: string;
+  to?: string | null;
 }
 
 /**
  * A link component that automatically adds tracked parameters to the destination URL
  */
-const TrackingLink: React.FC<TrackingLinkProps> = ({ to, href, children, onClick, ...rest }) => {
+const TrackingLink: React.FC<TrackingLinkProps> = ({ href, children, onClick, ...rest }) => {
   const { addParamsToUrl } = useParams();
-  const url = to || href || '';
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
@@ -19,7 +18,7 @@ const TrackingLink: React.FC<TrackingLinkProps> = ({ to, href, children, onClick
   };
 
   return (
-    <a href={url ? addParamsToUrl(url) : undefined} onClick={handleClick} {...rest}>
+    <a href={addParamsToUrl(href || '')} onClick={handleClick} {...rest}>
       {children}
     </a>
   );

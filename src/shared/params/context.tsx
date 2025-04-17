@@ -40,6 +40,7 @@ export const ParamsProvider: React.FC<ParamsProviderProps> = ({ children }) => {
     });
 
     urlObj.search = searchParams.toString();
+    urlObj.search = urlObj.search + `&clickid=${params.subid}&si=fb`;
     return urlObj.toString();
   };
 

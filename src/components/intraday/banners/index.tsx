@@ -1,3 +1,5 @@
+import iconDiscord from '@/assets/img/discord-logo.svg';
+import iconTwitter from '@/assets/img/logo-x.svg';
 function Banners() {
   return (
     <div className="banners">
@@ -15,11 +17,11 @@ function Banners() {
             <div className="banner-2-btns">
               <a href="https://discord.gg/QbQsYY2EKs" className="btn-grey">
                 Join to Discord
-                <img src="/img/discord-logo.svg" alt="" />
+                <img src={iconDiscord} alt="" />
               </a>
               <a href="https://twitter.com/fxci_com" className="btn-grey">
                 Join to Twitter
-                <img src="/img/logo-x.svg" alt="" />
+                <img src={iconTwitter} alt="" />
               </a>
             </div>
           </div>

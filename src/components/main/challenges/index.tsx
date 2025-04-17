@@ -1,4 +1,9 @@
-// First component: Challenges
+import iconSwing from '@/assets/img/challenges/card-logo-swing.svg';
+import iconIntraday from '@/assets/img/challenges/card-logo-intraday.svg';
+import iconInstant from '@/assets/img/challenges/card-logo-instant.svg';
+import iconCheck from '@/assets/img/checkmark.svg';
+import iconArrowRight from '@/assets/img/icons/icon-arrow-down-right.svg';
+
 const Challenges = () => {
   return (
     <section id="challenges">
@@ -10,7 +15,7 @@ const Challenges = () => {
             <div className="challenges__card-1-most-popular">MOST POPULAR</div>
             <div className="challenges__card-1-mask">
               <div className="challenges__card-1-logo">
-                <img src="/img/challenges/card-logo-swing.svg" alt="" />
+                <img src={iconSwing} alt="" />
               </div>
               <div className="challenges__card-1-title">Swing</div>
               <div className="challenges__card-1-desc">
@@ -19,19 +24,19 @@ const Challenges = () => {
               <div className="challenges__card-1-border"></div>
               <div className="challenges__card-1-details">
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> Up to 99% Profit Split
+                  <img src={iconCheck} alt="fxci" /> Up to 99% Profit Split
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> Weekend holding allowed
+                  <img src={iconCheck} alt="fxci" /> Weekend holding allowed
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> No Commissions
+                  <img src={iconCheck} alt="fxci" /> No Commissions
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> No Time Limit
+                  <img src={iconCheck} alt="fxci" /> No Time Limit
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> News Trading Allowed
+                  <img src={iconCheck} alt="fxci" /> News Trading Allowed
                 </div>
               </div>
               <a
@@ -40,14 +45,14 @@ const Challenges = () => {
                 className="challenges__card-1-btn scroll-to"
                 href="#"
               >
-                Start Challenge <img src="/img/arrow-right.svg" alt="fxci" />
+                Start Challenge <img src={iconArrowRight} alt="fxci" />
               </a>
             </div>
           </div>
           <div className="challenges__card-1 challenges__intraday">
             <div className="challenges__card-1-mask">
               <div className="challenges__card-1-logo">
-                <img src="/img/challenges/card-logo-intraday.svg" alt="" />
+                <img src={iconIntraday} alt="" />
               </div>
               <div className="challenges__card-1-title">Intraday</div>
               <div className="challenges__card-1-desc">
@@ -56,20 +61,19 @@ const Challenges = () => {
               <div className="challenges__card-1-border"></div>
               <div className="challenges__card-1-details">
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> Up to 99% Profit Split
+                  <img src={iconCheck} alt="fxci" /> Up to 99% Profit Split
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> Super Affordable
+                  <img src={iconCheck} alt="fxci" /> Super Affordable
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> Up to 10% Maximum Loss
-                  Limit
+                  <img src={iconCheck} alt="fxci" /> Up to 10% Maximum Loss Limit
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> Lowest Profit Target
+                  <img src={iconCheck} alt="fxci" /> Lowest Profit Target
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> News Trading Allowed
+                  <img src={iconCheck} alt="fxci" /> News Trading Allowed
                 </div>
               </div>
               <a
@@ -78,14 +82,14 @@ const Challenges = () => {
                 className="challenges__card-1-btn scroll-to"
                 href="#"
               >
-                Start Challenge <img src="/img/arrow-right.svg" alt="fxci" />
+                Start Challenge <img src={iconArrowRight} alt="fxci" />
               </a>
             </div>
           </div>
           <div className="challenges__card-1 challenges__instant">
             <div className="challenges__card-1-mask">
               <div className="challenges__card-1-logo">
-                <img src="/img/challenges/card-logo-instant.svg" alt="" />
+                <img src={iconInstant} alt="" />
               </div>
               <div className="challenges__card-1-title">Instant</div>
               <div className="challenges__card-1-desc">
@@ -95,19 +99,19 @@ const Challenges = () => {
               <div className="challenges__card-1-border"></div>
               <div className="challenges__card-1-details">
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> Get paid on the first day
+                  <img src={iconCheck} alt="fxci" /> Get paid on the first day
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> Best Conditions
+                  <img src={iconCheck} alt="fxci" /> Best Conditions
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> No Consistency Rule
+                  <img src={iconCheck} alt="fxci" /> No Consistency Rule
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> No Daily Loss
+                  <img src={iconCheck} alt="fxci" /> No Daily Loss
                 </div>
                 <div className="challenges__card-1-details-item">
-                  <img src="/img/challenges/icon-check.svg" alt="fxci" /> News Trading Allowed
+                  <img src={iconCheck} alt="fxci" /> News Trading Allowed
                 </div>
               </div>
               <a
@@ -116,7 +120,7 @@ const Challenges = () => {
                 className="challenges__card-1-btn scroll-to"
                 href="#"
               >
-                Start Challenge <img src="/img/arrow-right.svg" alt="fxci" />
+                Start Challenge <img src={iconArrowRight} alt="fxci" />
               </a>
             </div>
           </div>

@@ -1,3 +1,5 @@
+import TrackingLink from '@/shared/components/TrackingLink';
+
 function TermsAndConditionsComponent() {
   return (
     <section id="simple-page">
@@ -126,7 +128,8 @@ function TermsAndConditionsComponent() {
           </p>
           <p>2.14. “T&amp;Cs” means these Terms and Conditions.</p>
           <p>
-            2.15. “Website” means the website <a href="https://fxci.com/">https://fxci.com/</a>.
+            2.15. “Website” means the website{' '}
+            <TrackingLink href="https://fxci.com/">https://fxci.com/</TrackingLink>.
           </p>
           <p>
             2.16. “FXCI EXPERT account” – an account that the client receives after signing a
@@ -229,7 +232,7 @@ function TermsAndConditionsComponent() {
             6.7.6. performing test trades using an external, delayed or slow data feed or trading on
             delayed charts
           </p>
-          <p>6.7.7. ​​use of arbitrage or tick scalping strategies</p>
+          <p>6.7.7. use of arbitrage or tick scalping strategies</p>
           <p>
             6.7.8. employing software, artificial intelligence, ultra-high-speed capabilities, or
             mass data entry that could manipulate, exploit, or provide you with an unjust advantage
@@ -788,12 +791,16 @@ function TermsAndConditionsComponent() {
           <h2 className="h2-border">17. Refund Policy</h2>
           <p>
             17.1. FXCI.com Refund Policy is available there:{' '}
-            <a href="https://fxci.comrefund-policy/">https://fxci.comrefund-policy/</a>
+            <TrackingLink href="https://fxci.com/refund-policy/">
+              https://fxci.com/refund-policy/
+            </TrackingLink>
           </p>
           <h2 className="h2-border">18. Use of the Personal Information and the Privacy Policy</h2>
           <p>
             18.1. FXCI.com Privacy Policy is available there:{' '}
-            <a href="https://fxci.com/privacy-policy/">https://fxci.com/privacy-policy/</a>
+            <TrackingLink href={'https://fxci.com/privacy-policy/'}>
+              https://fxci.com/privacy-policy/
+            </TrackingLink>
           </p>
           <h2 className="h2-border">19. Indemnification</h2>
           <p>

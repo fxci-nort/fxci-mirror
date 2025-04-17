@@ -60,11 +60,9 @@ function RefundPolicy() {
           </p>
           <p>
             1.3. If you have any questions about the Refund Policy, please contact us by email at{' '}
-            <a href="/cdn-cgi/l/email-protection#8dfef8fdfde2fff9cdebf5eee4a3eee2e0">
-              <span className="__cf_email__" data-cfemail="87f4f2f7f7e8f5f3c7e1ffe4eea9e4e8ea">
-                [email&#160;protected]
-              </span>
-            </a>
+            <a href="mailto:support@fxci.com">
+              <span className="">support@fxci.com</span>
+            </a>{' '}
             .
           </p>
           <h2 className="h2-border">2. Restriction of refunds after the purchase</h2>
@@ -107,11 +105,9 @@ function RefundPolicy() {
           <p style={{ paddingLeft: '40px' }}>
             5.1.1. Request a refund. Customers who believe they are eligible for a refund must
             initiate the process by submitting a formal refund request through the contact email:{' '}
-            <a href="/cdn-cgi/l/email-protection#2b585e5b5b44595f6b4d53484205484446">
-              <span className="__cf_email__" data-cfemail="fc8f898c8c938e88bc9a849f95d29f9391">
-                [email&#160;protected]
-              </span>
-            </a>
+            <a href="mailto:support@fxci.com">
+              <span className="">support@fxci.com</span>
+            </a>{' '}
           </p>
           <p style={{ paddingLeft: '40px' }}>
             5.1.2. Review and Decision. Upon receiving a refund request, our dedicated refunds team
@@ -157,11 +153,9 @@ function RefundPolicy() {
             5.3. Please refer to our Refunds Policy for specific details, timelines, and any
             additional procedures related to the refund process. If you have any questions about the
             Refund Process, please contact us by email at{' '}
-            <a href="/cdn-cgi/l/email-protection#c7b4b2b7b7a8b5b387a1bfa4aee9a4a8aa">
-              <span className="__cf_email__" data-cfemail="4a393f3a3a25383e0a2c32292364292527">
-                [email&#160;protected]
-              </span>
-            </a>
+            <a href="mailto:support@fxci.com">
+              <span className="">support@fxci.com</span>
+            </a>{' '}
             .
           </p>
           <h2 className="h2-border">6. Exclusions</h2>
@@ -272,11 +266,9 @@ function RefundPolicy() {
           <h2 className="h2-border">10. Contact information</h2>
           <p>
             10.1. If you have any questions about the Refund Policy, please contact us by email at{' '}
-            <a href="/cdn-cgi/l/email-protection#364543464659444276504e555f1855595b">
-              <span className="__cf_email__" data-cfemail="ef9c9a9f9f809d9baf89978c86c18c8082">
-                [email&#160;protected]
-              </span>
-            </a>
+            <a href="mailto:support@fxci.com">
+              <span className="">support@fxci.com</span>
+            </a>{' '}
             .
           </p>
         </div>

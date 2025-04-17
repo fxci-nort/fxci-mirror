@@ -1,3 +1,10 @@
+import { Link } from 'react-router-dom';
+import logo from '@/assets/img/logo.svg';
+import footerDiscord from '@/assets/img/footer-discord.svg';
+import footerFacebook from '@/assets/img/footer-facebook.svg';
+import footerInst from '@/assets/img/footer-inst.svg';
+import footerTw from '@/assets/img/footer-tw.svg';
+
 const Footer = () => {
   return (
     <footer>
@@ -6,21 +13,21 @@ const Footer = () => {
           <div className="footer__row-1">
             <div>
               <a className="plan-button">
-                <img src="/img/logo.svg" alt="fxci" />
+                <img src={logo} alt="fxci" />
               </a>
             </div>
             <div className="footer__socials">
               <a href="https://discord.gg/QbQsYY2EKs">
-                <img src="/img/footer-discord.svg" alt="" />
+                <img src={footerDiscord} alt="" />
               </a>
               <a href="https://www.facebook.com/fxcicom">
-                <img src="/img/footer-facebook.svg" alt="" />
+                <img src={footerFacebook} alt="" />
               </a>
               <a href="https://www.instagram.com/fxci_com/">
-                <img src="/img/footer-inst.svg" alt="" />
+                <img src={footerInst} alt="" />
               </a>
               <a href="https://twitter.com/fxci_com">
-                <img src="/img/footer-tw.svg" alt="" />
+                <img src={footerTw} alt="" />
               </a>
             </div>
           </div>
@@ -40,13 +47,15 @@ const Footer = () => {
           </div>
           <div className="footer_bottom">
             <div className="footer__menu">
-              <a href="./contacts/">Contacts</a>
-              <a href="./cookie-policy/">Cookie Policy</a>
-              <a href="./disclaimer/">Disclaimer</a>
-              <a href="./refund-policy/">Refund Policy</a>
-              <a href="./terms-and-conditions/">Terms and Conditions</a>
+              <Link to="/contacts/">Contacts</Link>
+              <Link to="/cookie-policy/">Cookie Policy</Link>
+              <Link to="/disclaimer/">Disclaimer</Link>
+              <Link to="/refund-policy/">Refund Policy</Link>
+              <Link to="/terms-and-conditions/">Terms and Conditions</Link>
             </div>
-            <div className="footer__copy">© 2025 FXCI • All rights reserved</div>
+            <div className="footer__copy">
+              © {new Date().getFullYear()} FXCI • All rights reserved
+            </div>
           </div>
         </div>
       </div>

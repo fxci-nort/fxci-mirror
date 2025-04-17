@@ -1,3 +1,5 @@
+import { TrackingLink } from "@/shared/components";
+
 function Disclaimer() {
   return (
     <section id="simple-page">
@@ -128,12 +130,10 @@ function Disclaimer() {
 
           <p>
             If you have any questions about this Disclaimer, please contact FXCI support at mail to:{' '}
-            <a href="/cdn-cgi/l/email-protection#285b5d5858475a5c684e504b41064b47450a0a">
-              <span className="__cf_email__" data-cfemail="12616762627d606652746a717b3c717d7f">
-                [email&#160;protected]
-              </span>
+            <a href="mailto:support@fxci.com">
+              <span className="">support@fxci.com</span>
             </a>{' '}
-            or via the form provided here: <a href="/contacts">https://fxci.com/contacts</a>.
+            or via the form provided here: <TrackingLink href="https://fxci.com/contacts" />.
           </p>
         </div>
       </div>
