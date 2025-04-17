@@ -1,10 +1,3 @@
-import iconFxci from '@/assets/img/fxci-logo.svg';
-import iconFundednext from '@/assets/img/fundednext-logo.svg';
-import iconFtmo from '@/assets/img/ftmo-logo.svg';
-import iconAlphaCapitalGroup from '@/assets/img/alpha-capital-group-logo.svg';
-import iconCheck from '@/assets/img/checkmark.svg';
-import iconCross from '@/assets/img/cross.svg';
-
 const WhyChooseFXCI = () => {
   return (
     <section id="whe-choose">
@@ -20,16 +13,19 @@ const WhyChooseFXCI = () => {
                 VARIABLES
               </div>
               <div className="choose-table-header-cell choose-table-header-cell-border-sides choose-table-brown choose-table-text-center choose-table-gradient">
-                <img src={iconFxci} alt="fxci-logo" />
+                <img src="/assets/img/fxci-logo.svg" alt="fxci-logo" />
               </div>
               <div className="choose-table-header-cell choose-table-header-cell-border-sides choose-table-header-cell-border-bottom choose-table-header-grey choose-table-text-center">
-                <img src={iconFundednext} alt="fundednext-logo" />
+                <img src="/assets/img/fundednext-logo.svg" alt="fundednext-logo" />
               </div>
               <div className="choose-table-header-cell choose-table-header-cell-border-sides choose-table-header-cell-border-bottom choose-table-header-grey choose-table-text-center">
-                <img src={iconFtmo} alt="ftmo-logo" />
+                <img src="/assets/img/ftmo-logo.svg" alt="ftmo-logo" />
               </div>
               <div className="choose-table-header-cell choose-table-header-cell-border-sides choose-table-header-cell-border-bottom choose-table-header-grey choose-table-text-center choose-table-border-top-right-radius">
-                <img src={iconAlphaCapitalGroup} alt="alpha-capital-group-logo" />
+                <img
+                  src="/assets/img/alpha-capital-group-logo.svg"
+                  alt="alpha-capital-group-logo"
+                />
               </div>
             </div>
             <div className="choose-table-row">
@@ -50,16 +46,16 @@ const WhyChooseFXCI = () => {
             <div className="choose-table-row">
               <div className="choose-table-cell choose-table-grey">Instant Funding</div>
               <div className="choose-table-cell choose-table-brown choose-table-text-center">
-                <img src={iconCheck} alt="Checkmark" />
+                <img src="/assets/img/checkmark.svg" alt="Checkmark" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCross} alt="Cross" />
+                <img src="/assets/img/cross.svg" alt="Cross" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCross} alt="Cross" />
+                <img src="/assets/img/cross.svg" alt="Cross" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCross} alt="Cross" />
+                <img src="/assets/img/cross.svg" alt="Cross" />
               </div>
             </div>
             <div className="choose-table-row">
@@ -95,31 +91,31 @@ const WhyChooseFXCI = () => {
             <div className="choose-table-row">
               <div className="choose-table-cell choose-table-grey">Account Reset Option</div>
               <div className="choose-table-cell choose-table-brown choose-table-text-center">
-                <img src={iconCheck} alt="Checkmark" />
+                <img src="/assets/img/checkmark.svg" alt="Checkmark" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCross} alt="Cross" />
+                <img src="/assets/img/cross.svg" alt="Cross" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCross} alt="Cross" />
+                <img src="/assets/img/cross.svg" alt="Cross" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCross} alt="Cross" />
+                <img src="/assets/img/cross.svg" alt="Cross" />
               </div>
             </div>
             <div className="choose-table-row">
               <div className="choose-table-cell choose-table-grey">One Step Challenge</div>
               <div className="choose-table-cell choose-table-brown choose-table-text-center">
-                <img src={iconCheck} alt="Checkmark" />
+                <img src="/assets/img/checkmark.svg" alt="Checkmark" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCheck} alt="Checkmark" />
+                <img src="/assets/img/checkmark.svg" alt="Checkmark" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCross} alt="Cross" />
+                <img src="/assets/img/cross.svg" alt="Cross" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCross} alt="Cross" />
+                <img src="/assets/img/cross.svg" alt="Cross" />
               </div>
             </div>
             <div className="choose-table-row">
@@ -140,16 +136,16 @@ const WhyChooseFXCI = () => {
             <div className="choose-table-row">
               <div className="choose-table-cell choose-table-grey">No Time Limits</div>
               <div className="choose-table-cell choose-table-brown choose-table-text-center">
-                <img src={iconCheck} alt="Checkmark" />
+                <img src="/assets/img/checkmark.svg" alt="Checkmark" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCheck} alt="Checkmark" />
+                <img src="/assets/img/checkmark.svg" alt="Checkmark" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCheck} alt="Checkmark" />
+                <img src="/assets/img/checkmark.svg" alt="Checkmark" />
               </div>
               <div className="choose-table-cell choose-table-grey choose-table-text-center">
-                <img src={iconCheck} alt="Checkmark" />
+                <img src="/assets/img/checkmark.svg" alt="Checkmark" />
               </div>
             </div>
             <div className="choose-table-row">

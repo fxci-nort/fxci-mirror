@@ -1,8 +1,3 @@
-import iconSwing from '@/assets/img/challenges/card-logo-swing.svg';
-import iconIntraday from '@/assets/img/challenges/card-logo-intraday.svg';
-import iconInstant from '@/assets/img/challenges/card-logo-instant.svg';
-import iconCheck from '@/assets/img/checkmark.svg';
-
 import { TrackingLink } from '@/shared/components';
 import React, { useState } from 'react';
 
@@ -728,19 +723,19 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                   className={`plans-tab tab-name ${activeTab === 'swing' ? 'active' : ''}`}
                   onClick={() => setActiveTab('swing')}
                 >
-                  <img src={iconSwing} alt="" /> Swing
+                  <img src="/assets/img/swing-logo.png" alt="" /> Swing
                 </div>
                 <div
                   className={`plans-tab tab-name ${activeTab === 'intraday' ? 'active' : ''}`}
                   onClick={() => setActiveTab('intraday')}
                 >
-                  <img src={iconIntraday} alt="" /> Intraday
+                  <img src="/assets/img/intraday-logo.png" alt="" /> Intraday
                 </div>
                 <div
                   className={`plans-tab tab-name ${activeTab === 'instant' ? 'active' : ''}`}
                   onClick={() => setActiveTab('instant')}
                 >
-                  <img src={iconInstant} alt="" /> Instant
+                  <img src="/assets/img/instant-logo.png" alt="" /> Instant
                 </div>
               </div>
 
@@ -977,7 +972,9 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                       key={index}
                       className="plans-table__col border-dashed center standard-cell"
                     >
-                      {plan.balanceBasedDrawdown && <img src={iconCheck} alt="fxci" />}
+                      {plan.balanceBasedDrawdown && (
+                        <img src="/assets/img/checkmark.svg" alt="fxci" />
+                      )}
                     </div>
                   ))}
                 </div>
@@ -1019,7 +1016,7 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                       key={index}
                       className="plans-table__col border-dashed center standard-cell"
                     >
-                      {plan.newsTrading && <img src={iconCheck} alt="fxci" />}
+                      {plan.newsTrading && <img src="/assets/img/checkmark.svg" alt="fxci" />}
                     </div>
                   ))}
                 </div>
@@ -1286,7 +1283,9 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                       <div className="mb-plans-list-item-body-row">
                         <div className="lft">Balance Based Drawdown</div>
                         <div className="riht">
-                          {plan.balanceBasedDrawdown && <img src={iconCheck} alt="fxci" />}
+                          {plan.balanceBasedDrawdown && (
+                            <img src="/assets/img/checkmark.svg" alt="fxci" />
+                          )}
                         </div>
                       </div>
                       <div className="mb-plans-list-item-body-row">
@@ -1300,7 +1299,7 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                       <div className="mb-plans-list-item-body-row">
                         <div className="lft">News Trading</div>
                         <div className="riht">
-                          {plan.newsTrading && <img src={iconCheck} alt="fxci" />}
+                          {plan.newsTrading && <img src="/assets/img/checkmark.svg" alt="fxci" />}
                         </div>
                       </div>
                       <div className="mb-plans-list-item-body-row">

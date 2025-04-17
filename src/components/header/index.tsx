@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import TrackingLink from '@/shared/components/TrackingLink';
-import logo from '@/assets/img/logo.svg';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,7 +19,7 @@ const Header = () => {
       <div className="container mb-none">
         <div className="header__logo">
           <Link to="/" className="plan-button">
-            <img src={logo} alt="fxci" />
+            <img src="/assets/img/logo.svg" alt="fxci" />
           </Link>
         </div>
         <div className="">
@@ -51,7 +50,7 @@ const Header = () => {
         <div className="mb-header-top">
           <div className="header__logo">
             <Link to="/" className="plan-button">
-              <img src={logo} alt="fxci" />
+              <img src="/assets/img/logo.svg" alt="fxci" />
             </Link>
           </div>
           <div className="btn-mob-nav" onClick={toggleMobileMenu}></div>

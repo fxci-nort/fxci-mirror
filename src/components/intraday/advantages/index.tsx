@@ -1,10 +1,3 @@
-import iconCheck from '@/assets/img/icon-a-check.svg';
-import iconDol from '@/assets/img/icon-a-dol.svg';
-import iconProfit from '@/assets/img/icon-a-profit.svg';
-import iconPayout from '@/assets/img/icon-a-payout.svg';
-import iconCalendar from '@/assets/img/icon-a-calendar.svg';
-import iconSpread from '@/assets/img/icon-a-spread.svg';
-
 function Advantages() {
   return (
     <div className="container mb-container-scroll">
@@ -14,7 +7,7 @@ function Advantages() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src={iconCheck} alt="" />
+                <img src="/assets/img/icon-a-check.svg" alt="" />
               </div>
               <div className="card__2-title">No commission</div>
             </div>
@@ -26,7 +19,7 @@ function Advantages() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src={iconDol} alt="" />
+                <img src="/assets/img/icon-a-dol.svg" alt="" />
               </div>
               <div className="card__2-title">High-leverage</div>
             </div>
@@ -38,7 +31,7 @@ function Advantages() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src={iconProfit} alt="" />
+                <img src="/assets/img/icon-a-profit.svg" alt="" />
               </div>
               <div className="card__2-title">Profit split up to 99%</div>
             </div>
@@ -50,7 +43,7 @@ function Advantages() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src={iconPayout} alt="" />
+                <img src="/assets/img/icon-a-payout.svg" alt="" />
               </div>
               <div className="card__2-title">Bi-weekly payouts</div>
             </div>
@@ -63,7 +56,7 @@ function Advantages() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src={iconCalendar} alt="" />
+                <img src="/assets/img/icon-a-calendar.svg" alt="" />
               </div>
               <div className="card__2-title">Grow your capital up to $200k</div>
             </div>
@@ -75,7 +68,7 @@ function Advantages() {
           <div className="card__2">
             <div className="card__2-head">
               <div className="card__2-icon">
-                <img src={iconSpread} alt="" />
+                <img src="/assets/img/icon-a-spread.svg" alt="" />
               </div>
               <div className="card__2-title">Spreads from 0.0</div>
             </div>

@@ -1,13 +1,3 @@
-import logoGrey from '@/assets/img/logo-grey.svg';
-import aboutCheckmark from '@/assets/img/about-checkmark.svg';
-import people from '@/assets/img/people.svg';
-import diagram from '@/assets/img/diagram.svg';
-import wallet from '@/assets/img/wallet.svg';
-import star from '@/assets/img/star.svg';
-import diagram2 from '@/assets/img/diagram2.svg';
-import discord from '@/assets/img/discord.svg';
-import quotes from '@/assets/img/quotes.svg';
-
 function AboutUs() {
   return (
     <section id="about-us">
@@ -16,14 +6,14 @@ function AboutUs() {
           <div className="about-info">
             <span className="page-name">About Us</span>
             <h1>Meet the Team Behind</h1>
-            <img src={logoGrey} alt="FXCI" />
+            <img src="/assets/img/logo-grey.svg" alt="FXCI" />
             <span className="text">
               We are operators you can trust.
               <br /> Let's build a win-win partnership together.
             </span>
           </div>
           <div className="about-core-purpose">
-            <img className="main-img" src={people} alt="People" />
+            <img className="main-img" src="/assets/img/people.svg" alt="People" />
             <div className="text">
               <div className="text-container">
                 <span className="subtitle">Core Purpose</span>
@@ -31,7 +21,7 @@ function AboutUs() {
               </div>
               <div className="points">
                 <div className="point">
-                  <img src={aboutCheckmark} alt="Checkmark" />
+                  <img src="/assets/img/about-checkmark.svg" alt="Checkmark" />
                   <span className="text">
                     At FXCI, we are fueled by a clear and impactful mission: transforming lives
                     through trading. We recognize that every trade represents an individual with
@@ -40,7 +30,7 @@ function AboutUs() {
                   </span>
                 </div>
                 <div className="point">
-                  <img src={aboutCheckmark} alt="Checkmark" />
+                  <img src="/assets/img/about-checkmark.svg" alt="Checkmark" />
                   <span className="text">
                     Our unwavering commitment to traders inspires us to constantly push boundaries,
                     adopting innovative strategies and cutting-edge technologies that empower them
@@ -119,23 +109,23 @@ function AboutUs() {
             <div className="container">
               <div className="container2">
                 <div className="point">
-                  <img src={diagram} alt="Diagram" />
+                  <img src="/assets/img/diagram.svg" alt="Diagram" />
                   <span className="text">Up to 99% profit share</span>
                 </div>
                 <div className="point">
-                  <img src={wallet} alt="Wallet" />
+                  <img src="/assets/img/wallet.svg" alt="Wallet" />
                   <span className="text">Bi-weekly payments</span>
                 </div>
                 <div className="point">
-                  <img src={star} alt="Star" />
+                  <img src="/assets/img/star.svg" alt="Star" />
                   <span className="text">Gross spreads and without stop loss</span>
                 </div>
                 <div className="point">
-                  <img src={diagram2} alt="Diagram2" />
+                  <img src="/assets/img/diagram2.svg" alt="Diagram2" />
                   <span className="text">EAs, copy trading and martingale are allowed</span>
                 </div>
                 <div className="point">
-                  <img src={discord} alt="Discord" />
+                  <img src="/assets/img/discord.svg" alt="Discord" />
                   <span className="text">Community in Discord</span>
                 </div>
               </div>
@@ -145,7 +135,7 @@ function AboutUs() {
           <div className="about-values">
             <div className="block">
               <div className="text">
-                <img src="/img/quotes.svg" alt="Quotes" />
+                <img src="/assets/img/quotes.svg" alt="Quotes" />
                 <h2>OUR MISSION</h2>
               </div>
               <div className="description1">
@@ -162,7 +152,7 @@ function AboutUs() {
             </div>
             <div className="block">
               <div className="text">
-                <img src={quotes} alt="Quotes" />
+                <img src="/assets/img/quotes.svg" alt="Quotes" />
                 <h2>OUR VALUES</h2>
               </div>
               <div className="description1">

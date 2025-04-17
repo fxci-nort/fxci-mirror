@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import iconStars from '@/assets/img/stars.svg';
-import iconVerified from '@/assets/img/icon-verified.svg';
 
 interface FeedbackItemProps {
   author: string;
@@ -14,8 +12,8 @@ const TraderFeedback: React.FC = () => {
   const FeedbackItem: React.FC<FeedbackItemProps> = ({ author, time, shortReview, fullReview }) => (
     <div className="trader-feedback__item">
       <div className="trader-feedback__item-rating">
-        <img className="trader-feedback__item-rating-stars" src={iconStars} alt="" />
-        <img src={iconVerified} alt="" /> Verified
+        <img className="trader-feedback__item-rating-stars" src="/assets/img/stars.svg" alt="" />
+        <img src="/assets/img/icon-verified.svg" alt="" /> Verified
       </div>
       <div className="trader-feedback__item-author">
         {author}, {time}
@@ -264,10 +262,9 @@ const TraderFeedback: React.FC = () => {
 
   // Add extra CSS to enable proper scrolling
   const columnStyle: React.CSSProperties = {
-    height: '700px', // Increased from 500px to make it taller
+    height: '500px',
     overflowY: 'auto',
     position: 'relative',
-    pointerEvents: 'none', // Prevent manual scrolling
   };
 
   return (

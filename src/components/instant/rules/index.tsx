@@ -1,8 +1,3 @@
-import iconSecureti from '@/assets/img/icon-a-secureti.svg';
-import iconClockDol from '@/assets/img/icon-a-clock-dol.svg';
-import iconTwoArrow from '@/assets/img/icon-a-two-arrow.svg';
-import iconClose from '@/assets/img/icon-a-close.svg';
-
 function Rule() {
   return (
     <div className="model-page__rules-container container mb-container-scroll">
@@ -11,14 +6,14 @@ function Rule() {
         <div className="model-page__rules-list card__1-group scroll-wrap">
           <div className="card__1-row">
             <div className="model-page__rules-item card__1">
-              <img className="card__1-img" src={iconSecureti} alt="fxci" />
+              <img className="card__1-img" src="/assets/img/icon-a-secureti.svg" alt="fxci" />
               <div className=" card__1-title">No profit target</div>
               <div className="card__1-desc">
                 Your growth, your terms. Trade at your own pace with no profit target requirements.
               </div>
             </div>
             <div className="model-page__rules-item card__1">
-              <img className="card__1-img" src={iconClockDol} alt="fxci" />
+              <img className="card__1-img" src="/assets/img/icon-a-clock-dol.svg" alt="fxci" />
               <div className=" card__1-title">Payout in 24 hours</div>
               <div className="card__1-desc">
                 Enjoy quick access to your earnings and start earning from day one.
@@ -27,7 +22,7 @@ function Rule() {
           </div>
           <div className="card__1-row">
             <div className="model-page__rules-item card__1">
-              <img className="card__1-img" src={iconTwoArrow} alt="fxci" />
+              <img className="card__1-img" src="/assets/img/icon-a-two-arrow.svg" alt="fxci" />
               <div className=" card__1-title">10% Maximum Drawdown</div>
               <div className="card__1-desc">
                 our account is protected with a 10% maximum drawdown limit, providing a healthy
@@ -35,7 +30,7 @@ function Rule() {
               </div>
             </div>
             <div className="model-page__rules-item card__1">
-              <img className="card__1-img" src={iconClose} alt="fxci" />
+              <img className="card__1-img" src="/assets/img/icon-a-close.svg" alt="fxci" />
               <div className=" card__1-title">No consistency rule</div>
               <div className="card__1-desc">
                 Trade flexibly without consistency requirements. It's your strategy, your success.

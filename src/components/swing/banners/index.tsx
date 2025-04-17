@@ -1,7 +1,3 @@
-import banner1Img from '@/assets/img/banner-1-img.png';
-import iconDiscord from '@/assets/img/why/icon-discord.svg';
-import iconX from '@/assets/img/why/icon-x.svg';
-
 function Banner() {
   return (
     <div className="banners">
@@ -21,7 +17,7 @@ function Banner() {
               Learn More
             </a>
           </div>
-          <img className="banner-1-img" src={banner1Img} alt="" />
+          <img className="banner-1-img" src="/assets/img/banner-1-img.png" alt="" />
         </div>
 
         <div className="banner-2">
@@ -37,11 +33,11 @@ function Banner() {
             <div className="banner-2-btns">
               <a href="https://discord.gg/QbQsYY2EKs" className="btn-grey">
                 Join to Discord
-                <img src={iconDiscord} alt="" />
+                <img src="/assets/img/discord-logo.svg" alt="" />
               </a>
               <a href="https://twitter.com/fxci_com" className="btn-grey">
                 Join to Twitter
-                <img src={iconX} alt="" />
+                <img src="/assets/img/logo-x.svg" alt="" />
               </a>
             </div>
           </div>

@@ -1,9 +1,4 @@
 import { Link } from 'react-router-dom';
-import logo from '@/assets/img/logo.svg';
-import footerDiscord from '@/assets/img/footer-discord.svg';
-import footerFacebook from '@/assets/img/footer-facebook.svg';
-import footerInst from '@/assets/img/footer-inst.svg';
-import footerTw from '@/assets/img/footer-tw.svg';
 
 const Footer = () => {
   return (
@@ -13,21 +8,21 @@ const Footer = () => {
           <div className="footer__row-1">
             <div>
               <a className="plan-button">
-                <img src={logo} alt="fxci" />
+                <img src="/assets/img/logo.svg" alt="fxci" />
               </a>
             </div>
             <div className="footer__socials">
               <a href="https://discord.gg/QbQsYY2EKs">
-                <img src={footerDiscord} alt="" />
+                <img src="/assets/img/footer-discord.svg" alt="" />
               </a>
               <a href="https://www.facebook.com/fxcicom">
-                <img src={footerFacebook} alt="" />
+                <img src="/assets/img/footer-facebook.svg" alt="" />
               </a>
               <a href="https://www.instagram.com/fxci_com/">
-                <img src={footerInst} alt="" />
+                <img src="/assets/img/footer-inst.svg" alt="" />
               </a>
               <a href="https://twitter.com/fxci_com">
-                <img src={footerTw} alt="" />
+                <img src="/assets/img/footer-tw.svg" alt="" />
               </a>
             </div>
           </div>

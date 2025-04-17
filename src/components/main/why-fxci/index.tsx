@@ -1,11 +1,3 @@
-import iconGuaranteed from '@/assets/img/why/icon-guaranteed.svg';
-import iconCommunity from '@/assets/img/why/icon-community.svg';
-import iconSupport from '@/assets/img/why/icon-support.svg';
-import iconBar from '@/assets/img/why/bar.svg';
-import iconDiscord from '@/assets/img/why/icon-discord.svg';
-import iconFb from '@/assets/img/why/icon-fb.svg';
-import iconX from '@/assets/img/why/icon-x.svg';
-
 const WhyFXCI = () => {
   return (
     <section>
@@ -53,17 +45,21 @@ const WhyFXCI = () => {
               </div>
             </div>
             <div className="best_trading_platform-bars">
-              <img className="bar-1 bar" src={iconBar} alt="" />
-              <img className="bar-2 bar" src={iconBar} alt="" />
-              <img className="bar-3 bar" src={iconBar} alt="" />
-              <img className="bar-4 bar" src={iconBar} alt="" />
-              <img className="bar-5 bar" src={iconBar} alt="" />
+              <img className="bar-1 bar" src="/assets/img/why/bar.svg" alt="" />
+              <img className="bar-2 bar" src="/assets/img/why/bar.svg" alt="" />
+              <img className="bar-3 bar" src="/assets/img/why/bar.svg" alt="" />
+              <img className="bar-4 bar" src="/assets/img/why/bar.svg" alt="" />
+              <img className="bar-5 bar" src="/assets/img/why/bar.svg" alt="" />
             </div>
           </div>
           <div className="best_trading_platform-second">
             <div className="why__card-1-row">
               <div className="why__guaranteed why__card-1">
-                <img className="why__card-1-icon" src={iconGuaranteed} alt="" />
+                <img
+                  className="why__card-1-icon"
+                  src="/assets/img/why/icon-guaranteed.svg"
+                  alt=""
+                />
                 <div className="why__card-1-title">Guaranteed Payouts</div>
                 <div className="why__card-1-desc">
                   We ensure fast withdrawals across all methods, including bank transfers and
@@ -71,26 +67,26 @@ const WhyFXCI = () => {
                 </div>
               </div>
               <div className="why__community why__card-1">
-                <img className="why__card-1-icon" src={iconCommunity} alt="" />
+                <img className="why__card-1-icon" src="/assets/img/why/icon-community.svg" alt="" />
                 <div className="why__card-1-title">FXCI Community</div>
                 <div className="why__card-1-desc">
                   Become a member of our warm and fast-growing community
                 </div>
                 <div className="why__community-social">
                   <a href="https://discord.gg/QbQsYY2EKs">
-                    <img src={iconDiscord} alt="" />
+                    <img src="/assets/img/why/icon-discord.svg" alt="" />
                   </a>
                   <a href="https://www.facebook.com/fxcicom">
-                    <img src={iconFb} alt="" />
+                    <img src="/assets/img/why/icon-fb.svg" alt="" />
                   </a>
                   <a href="https://twitter.com/fxci_com">
-                    <img src={iconX} alt="" />
+                    <img src="/assets/img/why/icon-x.svg" alt="" />
                   </a>
                 </div>
               </div>
             </div>
             <div className="why__support why__card-1">
-              <img className="why__card-1-icon" src={iconSupport} alt="" />
+              <img className="why__card-1-icon" src="/assets/img/why/icon-support.svg" alt="" />
               <div>
                 <div className="why__card-1-title">24/7 Pro Support</div>
                 <div className="why__card-1-desc">
