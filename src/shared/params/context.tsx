@@ -24,7 +24,6 @@ export const ParamsProvider: React.FC<ParamsProviderProps> = ({ children }) => {
     });
 
     setParams(trackedValues);
-    console.log('Params initialized:', trackedValues);
   }, []);
 
   // Function to add params to a URL for redirects
@@ -39,8 +38,13 @@ export const ParamsProvider: React.FC<ParamsProviderProps> = ({ children }) => {
       }
     });
 
+    if (params.subid) {
+      searchParams.set('clickid', params.subid);
+    }
+
+    searchParams.set('si', 'fb');
+
     urlObj.search = searchParams.toString();
-    urlObj.search = urlObj.search + `&clickid=${params.subid}&si=fb`;
     return urlObj.toString();
   };
 

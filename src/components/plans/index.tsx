@@ -1,5 +1,23 @@
 import { TrackingLink } from '@/shared/components';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
+const useMediaQuery = (query: string): boolean => {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const media = window.matchMedia(query);
+      setMatches(media.matches);
+
+      const listener = (e: MediaQueryListEvent) => setMatches(e.matches);
+      media.addEventListener('change', listener);
+      return () => media.removeEventListener('change', listener);
+    }
+    return undefined;
+  }, [query]);
+
+  return matches;
+};
 
 interface PlanData {
   accountSize: string;
@@ -658,6 +676,9 @@ interface PlanProps {
 }
 
 const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlanSelect }) => {
+  // Определяем, является ли устройство мобильным
+  const isMobile = useMediaQuery('(max-width: 768px)');
+
   // State for active tab (swing, intraday, instant)
   const [activeTab, setActiveTab] = useState<'swing' | 'intraday' | 'instant'>('swing');
 
@@ -670,7 +691,11 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
   // Selected account size for mobile view
   const [selectedAccount, setSelectedAccount] = useState('5000');
 
-  // Get current plan data based on active tab and preference
+  // Refs для скролла
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
+  const plansListRef = useRef<HTMLDivElement>(null);
+
+  // Получаем текущие планы на основе активной вкладки и предпочтения
   const getCurrentPlans = (): PlanData[] => {
     // Safely access data with fallbacks at each level
     if (!plansData) return [];
@@ -693,7 +718,66 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
     return tabData[preferenceKey] || [];
   };
 
-  // Handler for plan selection
+  // Устанавливаем первый счет из списка при изменении таба или предпочтения
+  useEffect(() => {
+    const plans = getCurrentPlans();
+    if (plans.length > 0) {
+      const firstAccountSizeValue = plans[0].accountSize.replace(/[^\d]/g, '');
+      setSelectedAccount(firstAccountSizeValue);
+    }
+  }, [activeTab, swingPreference, intradayPreference, instantPreference]);
+
+  // Обеспечиваем скролл к выбранному элементу на мобильных устройствах
+  useEffect(() => {
+    if (isMobile && plansListRef.current) {
+      const selectedItem = plansListRef.current.querySelector(
+        `[data-account="${selectedAccount}"]`
+      );
+      if (selectedItem) {
+        const container = plansListRef.current;
+        const itemLeft = (selectedItem as HTMLElement).offsetLeft;
+        const containerWidth = container.offsetWidth;
+        const itemWidth = (selectedItem as HTMLElement).offsetWidth;
+
+        // Центрируем элемент в контейнере
+        container.scrollLeft = itemLeft - containerWidth / 2 + itemWidth / 2;
+      }
+    }
+  }, [selectedAccount, isMobile]);
+
+  // Обработчик горизонтального скролла для мобильных устройств
+  const handleTouchScroll = () => {
+    if (!plansListRef.current) return;
+
+    const container = plansListRef.current;
+    const centerX = container.scrollLeft + container.offsetWidth / 2;
+
+    // Находим элемент, который сейчас в центре экрана
+    let closestItemAccount = '';
+    let minDistance = Infinity;
+
+    const items = container.querySelectorAll('.mb-plans-list-item');
+    items.forEach(item => {
+      const itemElem = item as HTMLElement;
+      const itemLeft = itemElem.offsetLeft;
+      const itemWidth = itemElem.offsetWidth;
+      const itemCenter = itemLeft + itemWidth / 2;
+      const distance = Math.abs(centerX - itemCenter);
+
+      const account = itemElem.dataset.account;
+
+      if (distance < minDistance && account) {
+        minDistance = distance;
+        closestItemAccount = account;
+      }
+    });
+
+    if (closestItemAccount) {
+      setSelectedAccount(closestItemAccount);
+    }
+  };
+
+  // Handler для выбора плана
   const handlePlanSelection = (plan: PlanData): void => {
     if (onPlanSelect) {
       onPlanSelect(plan);
@@ -742,8 +826,9 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
               {/* Intraday Filters */}
               <div
                 className={`plans__filters plans__filters-intraday ${
-                  activeTab !== 'intraday' ? ' ' : ''
+                  activeTab === 'intraday' ? 'active' : ''
                 }`}
+                style={{ display: activeTab === 'intraday' ? 'flex' : 'none' }}
               >
                 <div className="plans__filters-title">Select Preference</div>
                 <div className="plans__filters-list plans__filters-list-intraday">
@@ -829,8 +914,9 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
               {/* Swing Filters */}
               <div
                 className={`plans__filters plans__filters-swing ${
-                  activeTab !== 'swing' ? ' ' : ''
+                  activeTab === 'swing' ? 'active' : ''
                 }`}
+                style={{ display: 'none' }}
               >
                 <div className="plans__filters-title">Select Preference</div>
                 <div className="plans__filters-list plans__filters-list-swing">
@@ -855,8 +941,9 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
               {/* Instant Filters */}
               <div
                 className={`plans__filters plans__filters-instant ${
-                  activeTab !== 'instant' ? ' ' : ''
+                  activeTab === 'instant' ? 'active' : ''
                 }`}
+                style={{ display: activeTab === 'instant' ? 'flex' : 'none' }}
               >
                 <div className="plans__filters-title">Select Preference</div>
                 <div className="plans__filters-list plans__filters-list-instant">
@@ -896,7 +983,12 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
 
             {/* Plans Table */}
             <div className="plans-table">
-              <div className="plans-table__detail plans-table__detail-upd" id="plan-name">
+              <div
+                className={`plans-table__detail plans-table__detail-upd ${
+                  activeTab === 'instant' ? 'big-table' : ''
+                }`}
+                id="plan-name"
+              >
                 <div className="plans-table__row head" id="desktop-accounts-row">
                   <div className="plans-table__col title left col-padding-title">Account Size</div>
 
@@ -1040,7 +1132,7 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
         </div>
 
         {/* Mobile View */}
-        <div className="mb-plans-section lg-none">
+        <div className="mb-plans-section lg-none" ref={mobileScrollRef}>
           <div className="mb-pd-r-20">
             <div className="mb-plan-list-tab">
               <div
@@ -1067,11 +1159,11 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
           {/* Mobile Intraday Preferences */}
           <div
             className={`mb-plan-reference mb-plan-reference-intraday ${
-              activeTab !== 'intraday' ? 'd-none' : ''
+              activeTab === 'intraday' ? 'active' : 'd-none'
             }`}
           >
             <div className="mb-plan-reference-title">Select Preference</div>
-            <div>
+            <div className="scroll-wrap">
               <div className="mb-plan-reference-list">
                 <div
                   className={`mb-plans__filters-item mb-plans__filters-item-intraday ${
@@ -1151,42 +1243,58 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                 </div>
               </div>
             </div>
+            <div className="scroll-wrap plan-price-filter">
+              {getCurrentPlans().map((plan: PlanData) => {
+                const accountSizeValue = plan.accountSize.replace(/[^\d]/g, '');
+                return (
+                  <div
+                    key={accountSizeValue}
+                    className={`plan-price-filter-item ${
+                      selectedAccount === accountSizeValue ? 'active' : ''
+                    }`}
+                    data-target-account={accountSizeValue}
+                    onClick={() => setSelectedAccount(accountSizeValue)}
+                  >
+                    {plan.accountSize}
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Mobile Swing Preferences */}
           <div
             className={`mb-plan-reference mb-plan-reference-swing ${
-              activeTab !== 'swing' ? 'd-none' : ''
+              activeTab === 'swing' ? 'active' : 'd-none'
             }`}
           >
-            <div className="mb-plan-reference-title">Select Preference</div>
-            <div>
-              <div className="mb-plan-reference-list">
-                <div
-                  className={`mb-plans__filters-item mb-plans__filters-item-swing active`}
-                  onClick={() => setSwingPreference('default')}
-                >
-                  <input
-                    type="radio"
-                    name="mb_swing_preference"
-                    id="mb_swing_default"
-                    checked={swingPreference === 'default'}
-                    onChange={() => {}}
-                  />
-                  <label htmlFor="mb_swing_default">Swing</label>
-                </div>
-              </div>
+            <div className="scroll-wrap plan-price-filter">
+              {getCurrentPlans().map((plan: PlanData) => {
+                const accountSizeValue = plan.accountSize.replace(/[^\d]/g, '');
+                return (
+                  <div
+                    key={accountSizeValue}
+                    className={`plan-price-filter-item ${
+                      selectedAccount === accountSizeValue ? 'active' : ''
+                    }`}
+                    data-target-account={accountSizeValue}
+                    onClick={() => setSelectedAccount(accountSizeValue)}
+                  >
+                    {plan.accountSize}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
           {/* Mobile Instant Preferences */}
           <div
             className={`mb-plan-reference mb-plan-reference-instant ${
-              activeTab !== 'instant' ? 'd-none' : ''
+              activeTab === 'instant' ? 'active' : 'd-none'
             }`}
           >
             <div className="mb-plan-reference-title">Select Preference</div>
-            <div>
+            <div className="scroll-wrap">
               <div className="mb-plan-reference-list">
                 <div
                   className={`mb-plans__filters-item mb-plans__filters-item-instant ${
@@ -1220,10 +1328,6 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Mobile account size filter */}
-          <div className="mb-plan-reference">
             <div className="scroll-wrap plan-price-filter">
               {getCurrentPlans().map((plan: PlanData) => {
                 const accountSizeValue = plan.accountSize.replace(/[^\d]/g, '');
@@ -1232,7 +1336,7 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                     key={accountSizeValue}
                     className={`plan-price-filter-item ${
                       selectedAccount === accountSizeValue ? 'active' : ''
-                    } ${activeTab === 'instant' ? 'plan-price-filter-item-instant' : ''}`}
+                    } ${Number(accountSizeValue) < 5000 ? 'plan-price-filter-item-instant' : ''}`}
                     data-target-account={accountSizeValue}
                     onClick={() => setSelectedAccount(accountSizeValue)}
                   >
@@ -1245,7 +1349,11 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
 
           {/* Mobile plans list */}
           <div className="mb-container-scroll">
-            <div className="mb-plans-list scroll-wrap">
+            <div
+              className="mb-plans-list scroll-wrap"
+              ref={plansListRef}
+              onScroll={handleTouchScroll}
+            >
               {getCurrentPlans().map((plan: PlanData, index: number) => {
                 const accountSizeValue = plan.accountSize.replace(/[^\d]/g, '');
                 return (
@@ -1254,7 +1362,8 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                     data-account={accountSizeValue}
                     className={`mb-plans-list-item ${
                       activeTab === 'instant' ? 'plan-instant' : ''
-                    } ${selectedAccount === accountSizeValue ? '' : 'd-none'}`}
+                    }`}
+                    style={{ display: 'block' }} // Показываем все планы для скролла
                   >
                     <div className="mb-plans-list-item-header">
                       <div className="mb-plans-list-item-header-title">Account Size</div>

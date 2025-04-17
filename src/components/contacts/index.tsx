@@ -15,7 +15,7 @@ function Contacts() {
               </div>
               <div className="contact-first-block-column-text-two">
                 <div className="contact-first-block-column-text">
-                  <img src="img/help.svg" alt="Help" />
+                  <img src="/assets/img/help.svg" alt="Help" />
                   <div className="text-container">
                     <div className="title">24/7 help</div>
                     <div className="text">
@@ -24,7 +24,7 @@ function Contacts() {
                   </div>
                 </div>
                 <div className="contact-first-block-column-text">
-                  <img src="img/support.svg" alt="Support" />
+                  <img src="/assets/img/support.svg" alt="Support" />
                   <div className="text-container">
                     <div className="title">Top-notch support</div>
                     <div className="text">

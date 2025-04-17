@@ -470,7 +470,7 @@ h1,
 .header__nav a,
 .plan-button {
   display: block;
-  font-size: 14px;
+  /* font-size: 14px; */
   font-weight: 700;
   line-height: 16.8px;
   text-align: left;
@@ -1379,9 +1379,9 @@ h1,
 }
 
 .plans__filters {
-  display: none;
+  display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 1px;
   width: 100%;
   min-width: 600px;
   justify-content: flex-start;
@@ -1470,6 +1470,12 @@ h1,
   min-width: 125px;
 }
 
+.big-table .plans-table__col {
+  min-width: 100px;
+  box-sizing: border-box;
+  padding: 1.5% 0px;
+}
+
 .plans-table__col.title {
   font-size: 20px;
   font-weight: 400;
@@ -1482,6 +1488,11 @@ h1,
   line-height: 19.2px;
   text-align: left;
   min-width: 250px;
+}
+
+.big-table .plans-table__col.title-2 {
+  min-width: 195px;
+  padding-right: 5px;
 }
 
 .plans-table__col.col-padding-title {
@@ -1534,6 +1545,11 @@ h1,
   align-items: center;
   background: url('/assets/img/get-plan-btn.svg') no-repeat;
   margin: 12px auto 0;
+}
+
+.big-table .plans-table__btn {
+  background: url('../img/get-plan-btn-big-table.svg') no-repeat;
+  width: 90px;
 }
 
 .plans-table__btn span,
