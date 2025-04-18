@@ -1,5 +1,7 @@
 import { TrackingLink } from '@/shared/components';
 import React, { useState, useEffect, useRef } from 'react';
+import { useParams } from '@/shared/params/useParams';
+import { BASE_URL } from '@/shared/config/base-url';
 
 const useMediaQuery = (query: string): boolean => {
   const [matches, setMatches] = useState(false);
@@ -675,7 +677,8 @@ interface PlanProps {
   onPlanSelect?: (plan: PlanData) => void;
 }
 
-const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlanSelect }) => {
+const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData }) => {
+  const { addParamsToUrl } = useParams();
   // Определяем, является ли устройство мобильным
   const isMobile = useMediaQuery('(max-width: 768px)');
 
@@ -778,10 +781,8 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
   };
 
   // Handler для выбора плана
-  const handlePlanSelection = (plan: PlanData): void => {
-    if (onPlanSelect) {
-      onPlanSelect(plan);
-    }
+  const handlePlanSelection = (): void => {
+    window.location.href = addParamsToUrl(BASE_URL);
   };
 
   return (
@@ -1003,8 +1004,11 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                       {plan.accountSize}
                       <button
                         className="plans-table__btn submit-plan-btn"
-                        onClick={() => handlePlanSelection(plan)}
-                        style={{ border: 'none' }}
+                        onClick={() => handlePlanSelection()}
+                        style={{
+                          border: 'none',
+                          fontSize: activeTab === 'instant' ? '14px' : '18px',
+                        }}
                       >
                         Get plan <span>Fee: {plan.fee}</span>
                       </button>
@@ -1370,7 +1374,7 @@ const PlanSection: React.FC<PlanProps> = ({ plansData = defaultPlansData, onPlan
                       <div className="mb-plans-list-item-price">{plan.accountSize}</div>
                       <button
                         className="mb-plans-list-item-btn"
-                        onClick={() => handlePlanSelection(plan)}
+                        onClick={() => handlePlanSelection()}
                         style={{ border: 'none' }}
                       >
                         Get plan <span>Fee: {plan.fee}</span>

@@ -262,9 +262,10 @@ const TraderFeedback: React.FC = () => {
 
   // Add extra CSS to enable proper scrolling
   const columnStyle: React.CSSProperties = {
-    height: '500px',
+    height: '700px',
     overflowY: 'auto',
     position: 'relative',
+    pointerEvents: 'none',
   };
 
   return (

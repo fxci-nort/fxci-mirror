@@ -1548,7 +1548,7 @@ h1,
 }
 
 .big-table .plans-table__btn {
-  background: url('../img/get-plan-btn-big-table.svg') no-repeat;
+  background: url('/assets/img/get-plan-btn-big-table.svg') no-repeat;
   width: 90px;
 }
 

@@ -8,6 +8,7 @@ const TRACKED_PARAMS: ParamConfig[] = [
   { name: 'account_name', saveToStorage: true },
   { name: 'ref', saveToStorage: true },
   { name: 'fbclid', saveToStorage: true },
+  { name: 'site', saveToStorage: true },
 ];
 
 export default TRACKED_PARAMS;
